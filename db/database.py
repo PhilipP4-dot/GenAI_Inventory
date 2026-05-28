@@ -35,8 +35,7 @@ load_dotenv(ROOT_DIR / "back" / ".env")
 
 # Create database URL from environment variables
 DATABASE_URL = (
-    f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
-    f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT', 5432)}/{os.getenv('DB_NAME')}"
+    os.getenv("DATABASE_URL")
 )
 
 # Create SQLAlchemy engine
