@@ -1,5 +1,7 @@
 # GenAI Inventory
 
+**Live application:** [aipantryfrontend.vercel.app](https://aipantryfrontend.vercel.app/)
+
 **Module:** Project README
 **Purpose:** Documents the GenAI Inventory workflow, repository structure, and local setup steps.
 
@@ -61,10 +63,10 @@ The project uses only these 19 categories:
 Create `back/.env`:
 
 ```env
-DB_HOST=inventory-db.cdkgm4c2klqg.us-east-2.rds.amazonaws.com
+DB_HOST=your_database_host
 DB_PORT=5432
 DB_NAME=inventory
-DB_USER=admin0
+DB_USER=your_database_user
 DB_PASSWORD=your_password_here
 GEMINI_API_KEY=your_gemini_key_here
 DRY_RUN=false
@@ -102,18 +104,14 @@ npm run dev
 Frontend URL:
 - `http://localhost:3000`
 
-Current demo login:
-- Pantry ID: `admin`
-- Password: `password`
-
-That login currently maps to pantry id `1`.
+Use credentials configured by the project administrator. Do not commit production or demo credentials to the repository.
 
 ## Full UI Workflow
 
 1. Start the backend
 2. Start the frontend
 3. Open `http://localhost:3000/login`
-4. Log in with `admin` / `password`
+4. Log in with configured project credentials
 5. Make sure a warehouse import exists for that pantry
 6. Upload a shelf photo
 7. Review the detected counts
